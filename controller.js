@@ -97,6 +97,7 @@ function AppCtrl($scope, $timeout, $http, _) {
 	$scope.owner = config.owner;
 	$scope.auroraForecast = config.auroraForecast;
 	$scope.imageName = config.imageName;
+	$scope.data = config.data;
 
 	function getHiddenProp() {
 		var prefixes = ['webkit', 'moz', 'ms', 'o'];
@@ -369,7 +370,7 @@ function AppCtrl($scope, $timeout, $http, _) {
 		dataFileIsOld = false;
 		now = new Date();
 		console.log("Read data.json at " + moment(now).format("MM-DD h:mm:ss a") + ":");
-		var url = "data.json" + '?_ts=' + now.getTime();
+		var url = typeof $scope.data == 'undefined' ? 'data.json' : $scope.data + '?_ts=' + now.getTime();
 		$http.get(url, {
 			cache: false
 		}).then(
