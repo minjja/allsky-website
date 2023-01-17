@@ -9,8 +9,8 @@ RUN docker-php-ext-configure gd --with-jpeg && \
 WORKDIR /var/www/html
 
 ENV ALLSKY_CONFIG /var/www/html
-ENV ALLSKY_VIDEOS /var/www/html/videos
-ENV ALLSKY_KEOGRAMS /var/www/html/keograms
-ENV ALLSKY_STARTRAILS /var/www/html/startrails
+ENV ALLSKY_VIDEOS .
+ENV ALLSKY_KEOGRAMS .
+ENV ALLSKY_STARTRAILS .
 
 ADD . .
