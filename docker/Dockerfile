@@ -14,12 +14,3 @@ ENV ALLSKY_STARTRAILS .
 WORKDIR /var/www/html
 
 ADD . .
-
-RUN rm -rf docker \
-    && mkdir -p /var/www/webdav \
-    && chown www-data:www-data /var/www/webdav
-
-COPY docker/etc/webdav.conf /etc/apache2/conf-available/webdav.conf
-
-RUN a2enmod dav dav_fs ssl
-RUN a2enconf webdav
