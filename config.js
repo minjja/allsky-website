@@ -1,7 +1,7 @@
 var config = {
 	comment: "See https://github.com/thomasjacquin/allsky/wiki/allsky-website-Settings for a description of these settings",
 	title: "XX_need_to_update_XX",
-	imageName: "/current/tmp/image.jpg",
+	imageName: "/image.jpg",
 	location: "XX_need_to_update_XX",
 	latitude_longitude_comment: "latitude and longitude must be decimal numbers with OUT the trailing N, S, E, and W.",
 	latitude: 0,
@@ -18,5 +18,5 @@ var config = {
 	auroraForecast: false,
 	auroraMap: "XX_need_to_update_XX",
 	intervalSeconds: 5,
-	data: 'data.json',
+	data: '/data.json',
 }
